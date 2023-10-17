@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang='fr'>
    <head>
       <meta charset="utf-8" />
       <title>Le blog de l'AVBN</title>
-      <link href="style.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" />
    </head>
 
    <body>
@@ -16,13 +16,13 @@
       ?>
       <div class="news">
          <h3>
-            <?php echo htmlspecialchars($post['title']); ?>
+            <?= htmlspecialchars($post['title']); ?>
             <em>le <?php echo $post['frenchCreationDate']; ?></em>
          </h3>
          <p>
          <?php
-         // On affiche le contenu du billet
-            echo nl2br ( htmlspecialchars( $post['content']));
+            // On affiche le contenu du billet
+            echo nl2br (htmlspecialchars( $post['content']));
          ?>
          <br />
          <em><a href="#">Commentaires</a></em>
@@ -30,7 +30,7 @@
       </div>
       <?php
       } // Fin de la boucle des billets
-      $statement->closeCursor();
+         /*$statement->closeCursor();*/
       ?>
    </body>
 </html>
